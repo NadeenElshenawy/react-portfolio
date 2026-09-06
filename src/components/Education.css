@@ -1,0 +1,170 @@
+/* SECTION CONTAINER */
+.education-section {
+  background-color: #f7f7f5;
+  padding: 8rem 6rem;
+  color: #121214;
+}
+
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* HEADER STYLES */
+.education-header {
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #888884;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.education-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: #121214;
+  line-height: 1;
+}
+
+/* TIMELINE WRAPPER WITH VERTICAL LINE */
+.timeline-wrapper {
+  position: relative;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* Left Vertical Guide Line */
+.timeline-line {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 5px;
+  width: 1px;
+  background-color: #e5e5e0;
+}
+
+/* INDIVIDUAL TIMELINE ITEM */
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* BULLET DOT ON THE LINE */
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 0.35rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #121214;
+  transform: translateX(-50%);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+/* PURPLE HIGHLIGHT FOR CURRENT ENROLLMENT */
+.timeline-dot.current {
+  background-color: #5848f5;
+  box-shadow: 0 0 0 4px rgba(88, 72, 245, 0.15);
+}
+
+/* CONTENT STYLING */
+.timeline-period {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888884;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: monospace;
+}
+
+.timeline-degree {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #121214;
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+
+.timeline-institution {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888884;
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  font-size: 0.80rem;
+  color: #666662;
+  line-height: 1.65;
+  max-width: 680px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .education-section {
+    padding: 5rem 2rem;
+  }
+
+  .education-title {
+    font-size: 2.8rem;
+  }
+
+  .timeline-degree {
+    font-size: 1.75rem;
+  }
+
+  .timeline-wrapper {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .education-title {
+    font-size: 2.1rem;
+  }
+
+  .timeline-wrapper {
+    padding-left: 1rem;
+    gap: 2rem;
+  }
+
+  .timeline-dot {
+    left: -1rem;
+    width: 8px;
+    height: 8px;
+  }
+
+  .timeline-degree {
+    font-size: 1.2rem;
+  }
+
+  .timeline-period {
+    font-size: 0.75rem;
+  }
+}

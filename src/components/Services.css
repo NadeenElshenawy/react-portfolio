@@ -1,0 +1,163 @@
+/* SECTION CONTAINER */
+.services-section {
+  background-color: #f7f7f5;
+  padding: 8rem 6rem;
+  color: #121214;
+}
+
+.services-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* SECTION HEADER */
+.services-header {
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #888884;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.services-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  color: #121214;
+  line-height: 1;
+}
+
+/* SERVICES LIST WRAPPER */
+.services-list {
+  border-top: 1px solid #e5e5e0;
+  border-bottom: 1px solid #e5e5e0;
+}
+
+/* INDIVIDUAL ROW */
+.service-item {
+  border-bottom: 1px solid #e5e5e0;
+  padding: 2.25rem 2rem;
+  cursor: pointer;
+transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+  background-color: transparent;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+/* ACTIVE / HIGHLIGHTED ROW STATE (Matching image 03 style) */
+.service-item.active {
+  background-color: #edeefd; /* Soft lavender/purple tint */
+  border-radius: 16px;
+  border-bottom-color: transparent;
+  box-shadow: 0 4px 20px rgba(88, 72, 245, 0.04); 
+}
+
+.service-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-left {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+/* NUMBERING */
+.service-number {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a1a19c;
+  font-family: monospace;
+}
+
+.service-item.active .service-number {
+  color: #5848f5;
+  font-weight: 700;
+}
+
+/* TITLE */
+.service-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #121214;
+  transition: color 0.2s ease;
+}
+
+.service-item.active .service-title {
+  color: #5848f5;
+}
+
+/* ARROW CIRCLE BUTTON */
+.service-arrow-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e0;
+  background-color: #ffffff;
+  color: #666662;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-item.active .service-arrow-btn {
+  background-color: #5848f5;
+  color: #ffffff;
+  border-color: #5848f5;
+  transform: scale(1.05);
+}
+
+/* DESCRIPTION TEXT BELOW ACTIVE ITEM */
+.service-description {
+  margin-top: 1rem;
+  padding-left: 5.25rem; /* Aligns description text right under title */
+  color: #666662;
+  font-size: 0.65rem;
+  line-height: 1.6;
+  max-width: 650px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 5rem 2rem;
+  }
+
+  .service-left {
+    gap: 1.5rem;
+  }
+
+  .service-title {
+    font-size: 1.6rem;
+  }
+
+  .service-description {
+    padding-left: 0;
+    margin-top: 1.25rem;
+  }
+}

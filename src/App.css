@@ -1,0 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap'); */
+
+:root {
+  --bg-dark: #0a0a0c;
+  --bg-light: #f6f6f4;
+  --text-dark-primary: #ffffff;
+  --text-dark-secondary: #94949e;
+  --text-light-primary: #121214;
+  --text-light-secondary: #66666e;
+  --accent-purple: #635bff;
+  --accent-purple-hover: #5248e5;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-light);
+  color: var(--text-light-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+html {
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,149 @@
+/* SECTION WRAPPER */
+.about-section {
+  background-color: #f7f7f5;
+  padding: 8rem 6rem;
+  color: #121214;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal 50/50 split */
+  gap: 5rem;
+  align-items: start;
+}
+
+/* SECTION LABEL */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #888884;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* LEFT COLUMN HEADING */
+.about-heading {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 3.5rem;
+}
+
+.serif-italic-purple {
+  font-style: italic;
+  color: #5848f5; /* Signature purple accent */
+}
+
+.serif-italic-gray {
+  font-style: italic;
+  color: #888884;
+}
+
+/* 2x2 HIGHLIGHT CARDS GRID */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.highlight-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  border: 1px solid #ebebe6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: border-color 0.3s ease;
+
+}
+.highlight-card:hover{
+    border: 1px solid #5848f5;
+
+
+    
+}
+
+.card-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #888884;
+  margin-bottom: 0.75rem;
+}
+
+.card-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #121214;
+  line-height: 1.3;
+transition: color 0.3s ease;
+
+}
+.highlight-card:hover p {
+    color: #5848f5;
+}
+
+/* RIGHT COLUMN BIO PARAGRAPHS */
+.bio-text {
+  display: flex;
+  flex-direction: flex-column;
+  gap: 1.25rem;
+}
+
+.bio-text p {
+  color: #666662;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* STATS SECTION */
+.stats-divider {
+  height: 1px;
+  background-color: #e5e5e0;
+  margin: 3rem 0 2rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #5848f5; /* Styled purple matching mockup stat color */
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #888884;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .about-section {
+    padding: 5rem 2rem;
+  }
+}

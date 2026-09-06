@@ -1,0 +1,221 @@
+/* SECTION WRAPPER */
+.testimonials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem; /* Adds space between multiple testimonial cards */
+  width: 100%;
+}
+.testimonials-section {
+  padding: 8rem 2rem;
+  background-color: #f7f7f5;
+  color: #121214;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials-container {
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+/* HEADER STYLES */
+.testimonials-subtitle {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #888884;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.testimonials-title {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #121214;
+  margin-bottom: 3.5rem;
+  line-height: 1.1;
+}
+
+/* MAIN CARD CONTAINER (HANDLES BOTH STATES) */
+.testimonials-card {
+    height: 280px; /* Locks height to prevent pushing lower sections down */
+    box-sizing: border-box;
+
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* PLACEHOLDER SPECIFIC BORDER */
+.testimonials-card.is-placeholder {
+  border: 1.5px dashed #c0c0ba;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* ACTIVE TESTIMONIAL LAYOUT */
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 580px;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #27272a;
+  font-style: italic;
+  margin: 0;
+  max-height: 120px; /* Limits quote height */
+  overflow-y: auto; /* Adds clean scrollbar if text exceeds container */
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-align: left;
+  margin-top: auto; /* Pushes author block cleanly to the card base */
+}
+.testimonials-slider-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #121214;
+  margin: 0;
+}
+
+.author-role {
+  font-size: 0.78rem;
+  color: #71717a;
+}
+
+/* PLACEHOLDER STYLES */
+.quote-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #eeeeea;
+  color: #a0a09a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonials-text {
+  font-size: 0.95rem;
+  color: #666662;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0;
+}
+
+.testimonials-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #5848f5;
+  text-decoration: none;
+}
+.slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+.slider-arrow {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #121214;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.slider-arrow:hover {
+  background-color: #5848f5;
+  color: #ffffff;
+  border-color: #5848f5;
+  transform: translateY(-1px);
+}
+
+/* PAGINATION DOTS */
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d1d1cc;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.slider-dot.active {
+  background-color: #5848f5;
+  width: 20px;
+  border-radius: 999px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 5rem 1.25rem;
+  }
+
+  .testimonials-title {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonials-card {
+    padding: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+
+  .testimonial-quote {
+    font-size: 0.98rem;
+  }
+}

@@ -1,0 +1,83 @@
+/* FOOTER CONTAINER */
+.footer {
+  width: 100%;
+  background-color: #f7f7f5;
+  border-top: 1px solid #e5e5e0;
+  padding: 3rem 6rem;
+  color: #121214;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* BRANDING */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-name {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #121214;
+  margin: 0;
+  line-height: 1;
+}
+
+.footer-title {
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #888884;
+}
+
+/* LINKS */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-link {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #666662;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #5848f5;
+}
+
+/* COPYRIGHT */
+.footer-copyright {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #888884;
+}
+
+/* RESPONSIVE (SMARTPHONES) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+  }
+}
