@@ -1,4 +1,5 @@
 import "./Skills.css";
+import { ScrollReveal } from "./ScrollReveal";
 
 export const Skills = () => {
   const tools = [
@@ -6,7 +7,7 @@ export const Skills = () => {
       name: "JavaScript",
       category: "CORE LANGUAGE",
       level: "Proficient",
-      dots: 4, // Out of 5
+      dots: 4,
       docUrl: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       iconBg: "#f7df1e",
       iconColor: "#000000",
@@ -62,69 +63,88 @@ export const Skills = () => {
       iconColor: "#ffffff",
       iconText: "⎇",
     },
-    
   ];
 
   return (
     <section className="skills-section" id="skills">
-      <div className="skills-header">
-        <div>
-          <span className="section-label">SKILLS</span>
-          <h2 className="section-title">Tools of the craft.</h2>
-        </div>
-        <p className="skills-subtitle">
-          The technologies I use day-to-day to build responsive, production-ready interfaces.
-        </p>
-      </div>
 
-      {/* Main Dark Dashboard Box */}
-      <div className="skills-dashboard">
-        <div className="dashboard-meta">
-          <span className="dot-purple"></span>
-          <span>TECH STACK</span>
-          <span className="separator">•</span>
-          <span>{tools.length} TECHNOLOGIES</span>
-        </div>
+      <ScrollReveal delay={0.1}>
+        <div className="skills-header">
+          <div>
+            <span className="section-label">SKILLS</span>
+            <h2 className="section-title">Tools of the craft.</h2>
+          </div>
 
-        <div className="tools-grid">
-          {tools.map((tool, index) => (
-            <a
-              key={index}
-              href={tool.docUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="tool-card"
-            >
-              <div className="tool-left">
-                <div
-                  className="tool-icon"
-                  style={{ backgroundColor: tool.iconBg, color: tool.iconColor }}
-                >
-                  {tool.iconText}
-                </div>
-                <div className="tool-info">
-                  <h3 className="tool-name">{tool.name}</h3>
-                  <span className="tool-category">{tool.category}</span>
-                </div>
-              </div>
-
-              <div className="tool-right">
-                <span className={`badge ${tool.level.toLowerCase()}`}>
-                  {tool.level}
-                </span>
-                <div className="dots-row">
-                  {[...Array(5)].map((_, i) => (
-                    <span
-                      key={i}
-                      className={`rating-dot ${i < tool.dots ? "filled" : ""}`}
-                    ></span>
-                  ))}
-                </div>
-              </div>
-            </a>
-          ))}
+          <p className="skills-subtitle">
+            The technologies I use day-to-day to build responsive,
+            production-ready interfaces.
+          </p>
         </div>
-      </div>
+      </ScrollReveal>
+
+      <ScrollReveal delay={0.25}>
+        <div className="skills-dashboard">
+
+          <div className="dashboard-meta">
+            <span className="dot-purple"></span>
+            <span>TECH STACK</span>
+            <span className="separator">•</span>
+            <span>{tools.length} TECHNOLOGIES</span>
+          </div>
+
+          <div className="tools-grid">
+            {tools.map((tool, index) => (
+              <a
+                key={index}
+                href={tool.docUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="tool-card"
+              >
+                <div className="tool-left">
+                  <div
+                    className="tool-icon"
+                    style={{
+                      backgroundColor: tool.iconBg,
+                      color: tool.iconColor,
+                    }}
+                  >
+                    {tool.iconText}
+                  </div>
+
+                  <div className="tool-info">
+                    <h3 className="tool-name">{tool.name}</h3>
+                    <span className="tool-category">
+                      {tool.category}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="tool-right">
+                  <span
+                    className={`badge ${tool.level.toLowerCase()}`}
+                  >
+                    {tool.level}
+                  </span>
+
+                  <div className="dots-row">
+                    {[...Array(5)].map((_, i) => (
+                      <span
+                        key={i}
+                        className={`rating-dot ${
+                          i < tool.dots ? "filled" : ""
+                        }`}
+                      ></span>
+                    ))}
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+        </div>
+      </ScrollReveal>
+
     </section>
   );
 };

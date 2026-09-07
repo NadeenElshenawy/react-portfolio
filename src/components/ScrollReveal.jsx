@@ -7,7 +7,7 @@ export const ScrollReveal = ({ children, delay = 0 }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{
-        duration: 0.6,
+        duration: 0.8,
         delay: delay,
         ease: [0.16, 1, 0.3, 1], // Smooth custom easing
       }}
