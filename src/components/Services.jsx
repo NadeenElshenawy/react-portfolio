@@ -1,37 +1,10 @@
 import { useState } from "react";
 import "./Services.css";
 import { ScrollReveal } from "./ScrollReveal";
+import{servicesData} from "../data/servicesData"
 
 export const Services = () => {
   const [activeService, setActiveService] = useState(null);
-
-  const services = [
-    {
-      id: "01",
-      title: "React Website Development",
-      description:
-        "Building fast, modern, and scalable web applications using React and modular component architectures tailored to your business goals.",
-    },
-    {
-      id: "02",
-      title: "Figma to React",
-      description:
-        "Pixel-perfect translation of your Figma UI designs into clean, maintainable, production-ready React code.",
-    },
-    {
-      id: "03",
-      title: "Responsive Development",
-      description:
-        "Ensuring every interface works beautifully across all devices — from large desktop screens to the smallest mobile viewports.",
-    },
-    {
-      id: "04",
-      title: "Front-End Fixes & Improvements",
-      description:
-        "Refactoring existing web components, resolving UI layout bugs, and enhancing responsiveness and user performance.",
-    },
-  ];
-
   return (
     <section className="services-section" id="services">
       <div className="services-container">
@@ -47,7 +20,7 @@ export const Services = () => {
         {/* Accordion / Interactive List */}
         <ScrollReveal delay={0.25}>
           <div className="services-list">
-            {services.map((service, index) => {
+            {servicesData.map((service, index) => {
               const isActive = activeService === index;
 
               return (
