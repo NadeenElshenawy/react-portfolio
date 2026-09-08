@@ -1,9 +1,6 @@
-// src/data/testimonialsData.js
 
 export const testimonialsData = [
-  // Leave this array empty [] to show the dashed placeholder state:
-  // export const testimonialsData = [];
-
+  
 
   {
     id: "01",
@@ -11,6 +8,13 @@ export const testimonialsData = [
     author: "Momen Kotb",
     role: "Teammate & Project Collaborator",
     avatar: ""
+  }
+  ,{
+    id:"02",
+    quote:"It was such a pleasure working with an ambition colleague, who is not only willing to learn when the opportunity arrives, but also detailed focus in order to deliver the information with newcomer-friendly approach. And also easy to engage with,Looking forward to your growth.",
+    author:"Amr Khaled",
+    role:"Team Leader",
+    avatar:""
   }
   
 ];

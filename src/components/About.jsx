@@ -11,7 +11,7 @@ export const About = () => {
 
   const stats = [
     { number: "2024", label: "STARTED CODING" },
-    { number: "3+", label: "PROJECTS BUILT" },
+    { number: "2+", label: "PROJECTS BUILT" },
     { number: "100%", label: "RESPONSIVE-FIRST" },
   ];
 

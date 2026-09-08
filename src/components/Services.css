@@ -125,7 +125,7 @@ transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ea
   margin-top: 1rem;
   padding-left: 5.25rem; /* Aligns description text right under title */
   color: #666662;
-  font-size: 0.65rem;
+  font-size: 0.80rem;
   line-height: 1.6;
   max-width: 650px;
   animation: fadeIn 0.3s ease forwards;
